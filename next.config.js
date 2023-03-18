@@ -2,7 +2,16 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    async redirects() {
+      return [
+        {
+          source: "/contact",
+          destination: "https://nomadcoders.co",
+          permanent: false,
+        },
+      ];
+    },
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
